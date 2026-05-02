@@ -1,0 +1,338 @@
+{
+  "cves": [
+    {
+      "cve_id": "CVE-2024-0001",
+      "raw_text": "Critical vulnerability discovered in Apache L0g4j library version 2.x. Remote code execution possible through JNDI lookup exploitation. Attackers can execute arbitrary code by sending specially crafted log messages. CVSS Score: 10.0. Immediate patching required for all affected systems.",
+      "source": "nvd",
+      "ingested_at": "2024-01-15T10:30:00Z",
+      "triage_output": {
+        "cve_id": "CVE-2024-0001",
+        "cvss_score": 10.0,
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "affected_products": [
+          {
+            "vendor": "Apache",
+            "product": "Log4j",
+            "version_range": "2.0-beta9 to 2.14.1"
+          }
+        ],
+        "attack_vector": "Network",
+        "attack_complexity": "Low",
+        "privileges_required": "None",
+        "user_interaction": "None",
+        "description": "Critical remote code execution vulnerability in Apache Log4j library allowing attackers to execute arbitrary code through JNDI lookup exploitation.",
+        "severity": "CRITICAL",
+        "priority_score": 100,
+        "exploitability": "Active exploitation in wild",
+        "recommended_action": "Immediate patch",
+        "mitre": {
+          "tactic": "Execution",
+          "technique_id": "T1059",
+          "technique_name": "Command and Scripting Interpreter",
+          "sub_technique_id": "T1059.001"
+        },
+        "typo_flags": [
+          {
+            "field": "raw_text",
+            "position": 48,
+            "original": "0",
+            "suspected_intent": "o",
+            "confidence": 0.95,
+            "risk": "obfuscation",
+            "context": "L0g4j"
+          },
+          {
+            "field": "raw_text",
+            "position": 50,
+            "original": "4",
+            "suspected_intent": "a",
+            "confidence": 0.85,
+            "risk": "obfuscation",
+            "context": "L0g4j"
+          }
+        ],
+        "test_cases": [
+          {
+            "id": "TC001",
+            "description": "Verify CVE ID extraction",
+            "expected": "CVE-2024-0001",
+            "input": "cve_id"
+          },
+          {
+            "id": "TC002",
+            "description": "Verify CVSS score calculation",
+            "expected": "10.0",
+            "input": "cvss_score"
+          },
+          {
+            "id": "TC003",
+            "description": "Verify severity classification",
+            "expected": "CRITICAL",
+            "input": "severity"
+          },
+          {
+            "id": "TC004",
+            "description": "Verify obfuscation detection",
+            "expected": "2",
+            "input": "typo_flags.length"
+          }
+        ],
+        "qa_status": "PENDING",
+        "triage_confidence": 0.98,
+        "watsonx_model": "ibm/granite-13b-instruct-v2",
+        "human_review_required": false
+      }
+    },
+    {
+      "cve_id": "CVE-2024-0002",
+      "raw_text": "High severity vulnerability in F0rt1net FortiOS SSL-VPN. Authentication bypass allows unauthorized access to internal networks. Affects FortiOS versions 6.0.0 through 7.0.5. CVSS Score: 9.8. Patch immediately.",
+      "source": "vendor",
+      "ingested_at": "2024-01-16T14:20:00Z",
+      "triage_output": {
+        "cve_id": "CVE-2024-0002",
+        "cvss_score": 9.8,
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "affected_products": [
+          {
+            "vendor": "Fortinet",
+            "product": "FortiOS SSL-VPN",
+            "version_range": "6.0.0 to 7.0.5"
+          }
+        ],
+        "attack_vector": "Network",
+        "attack_complexity": "Low",
+        "privileges_required": "None",
+        "user_interaction": "None",
+        "description": "Authentication bypass vulnerability in Fortinet FortiOS SSL-VPN allowing unauthorized network access.",
+        "severity": "CRITICAL",
+        "priority_score": 98,
+        "exploitability": "PoC public",
+        "recommended_action": "Immediate patch",
+        "mitre": {
+          "tactic": "Initial Access",
+          "technique_id": "T1133",
+          "technique_name": "External Remote Services",
+          "sub_technique_id": null
+        },
+        "typo_flags": [
+          {
+            "field": "raw_text",
+            "position": 33,
+            "original": "0",
+            "suspected_intent": "o",
+            "confidence": 0.92,
+            "risk": "obfuscation",
+            "context": "F0rt1net"
+          },
+          {
+            "field": "raw_text",
+            "position": 37,
+            "original": "1",
+            "suspected_intent": "i",
+            "confidence": 0.88,
+            "risk": "obfuscation",
+            "context": "F0rt1net"
+          }
+        ],
+        "test_cases": [
+          {
+            "id": "TC001",
+            "description": "Verify CVE ID extraction",
+            "expected": "CVE-2024-0002",
+            "input": "cve_id"
+          },
+          {
+            "id": "TC002",
+            "description": "Verify CVSS score",
+            "expected": "9.8",
+            "input": "cvss_score"
+          },
+          {
+            "id": "TC003",
+            "description": "Verify affected product",
+            "expected": "FortiOS SSL-VPN",
+            "input": "affected_products[0].product"
+          }
+        ],
+        "qa_status": "PENDING",
+        "triage_confidence": 0.96,
+        "watsonx_model": "ibm/granite-13b-instruct-v2",
+        "human_review_required": false
+      }
+    },
+    {
+      "cve_id": "CVE-2024-0003",
+      "raw_text": "Critical SQL injection vulnerability in WordPress core affecting versions 6.0 through 6.4.2. Allows unauthenticated attackers to execute arbitrary SQL commands. CVSS Score: 9.8. Update to version 6.4.3 immediately.",
+      "source": "osint",
+      "ingested_at": "2024-01-17T09:15:00Z",
+      "triage_output": {
+        "cve_id": "CVE-2024-0003",
+        "cvss_score": 9.8,
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "affected_products": [
+          {
+            "vendor": "WordPress",
+            "product": "WordPress Core",
+            "version_range": "6.0 to 6.4.2"
+          }
+        ],
+        "attack_vector": "Network",
+        "attack_complexity": "Low",
+        "privileges_required": "None",
+        "user_interaction": "None",
+        "description": "SQL injection vulnerability in WordPress core allowing unauthenticated attackers to execute arbitrary SQL commands.",
+        "severity": "CRITICAL",
+        "priority_score": 98,
+        "exploitability": "PoC public",
+        "recommended_action": "Immediate patch",
+        "mitre": {
+          "tactic": "Initial Access",
+          "technique_id": "T1190",
+          "technique_name": "Exploit Public-Facing Application",
+          "sub_technique_id": null
+        },
+        "typo_flags": [],
+        "test_cases": [
+          {
+            "id": "TC001",
+            "description": "Verify CVE ID",
+            "expected": "CVE-2024-0003",
+            "input": "cve_id"
+          },
+          {
+            "id": "TC002",
+            "description": "Verify CVSS score",
+            "expected": "9.8",
+            "input": "cvss_score"
+          },
+          {
+            "id": "TC003",
+            "description": "Verify severity",
+            "expected": "CRITICAL",
+            "input": "severity"
+          }
+        ],
+        "qa_status": "PENDING",
+        "triage_confidence": 0.95,
+        "watsonx_model": "ibm/granite-13b-instruct-v2",
+        "human_review_required": false
+      }
+    },
+    {
+      "cve_id": "CVE-2024-0004",
+      "raw_text": "High severity privilege escalation vulnerability in Linux kernel versions 5.10 through 6.1. Local attackers can gain root privileges through race condition in memory management. CVSS Score: 7.8. Patch available.",
+      "source": "nvd",
+      "ingested_at": "2024-01-18T11:45:00Z",
+      "triage_output": {
+        "cve_id": "CVE-2024-0004",
+        "cvss_score": 7.8,
+        "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "affected_products": [
+          {
+            "vendor": "Linux",
+            "product": "Linux Kernel",
+            "version_range": "5.10 to 6.1"
+          }
+        ],
+        "attack_vector": "Local",
+        "attack_complexity": "Low",
+        "privileges_required": "Low",
+        "user_interaction": "None",
+        "description": "Privilege escalation vulnerability in Linux kernel allowing local attackers to gain root privileges.",
+        "severity": "HIGH",
+        "priority_score": 78,
+        "exploitability": "No known exploit",
+        "recommended_action": "Patch within 24h",
+        "mitre": {
+          "tactic": "Privilege Escalation",
+          "technique_id": "T1068",
+          "technique_name": "Exploitation for Privilege Escalation",
+          "sub_technique_id": null
+        },
+        "typo_flags": [],
+        "test_cases": [
+          {
+            "id": "TC001",
+            "description": "Verify CVE ID",
+            "expected": "CVE-2024-0004",
+            "input": "cve_id"
+          },
+          {
+            "id": "TC002",
+            "description": "Verify CVSS score",
+            "expected": "7.8",
+            "input": "cvss_score"
+          },
+          {
+            "id": "TC003",
+            "description": "Verify severity",
+            "expected": "HIGH",
+            "input": "severity"
+          }
+        ],
+        "qa_status": "PENDING",
+        "triage_confidence": 0.92,
+        "watsonx_model": "ibm/granite-13b-instruct-v2",
+        "human_review_required": false
+      }
+    },
+    {
+      "cve_id": "CVE-2024-0005",
+      "raw_text": "Medium severity information disclosure vulnerability in Microsoft Exchange Server 2019. Authenticated users can access sensitive email metadata. CVSS Score: 5.5. Patch recommended within 7 days.",
+      "source": "vendor",
+      "ingested_at": "2024-01-19T16:30:00Z",
+      "triage_output": {
+        "cve_id": "CVE-2024-0005",
+        "cvss_score": 5.5,
+        "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "affected_products": [
+          {
+            "vendor": "Microsoft",
+            "product": "Exchange Server",
+            "version_range": "2019 CU12 and earlier"
+          }
+        ],
+        "attack_vector": "Network",
+        "attack_complexity": "Low",
+        "privileges_required": "Low",
+        "user_interaction": "None",
+        "description": "Information disclosure vulnerability in Microsoft Exchange Server allowing authenticated users to access sensitive email metadata.",
+        "severity": "MEDIUM",
+        "priority_score": 55,
+        "exploitability": "No known exploit",
+        "recommended_action": "Monitor",
+        "mitre": {
+          "tactic": "Collection",
+          "technique_id": "T1005",
+          "technique_name": "Data from Local System",
+          "sub_technique_id": null
+        },
+        "typo_flags": [],
+        "test_cases": [
+          {
+            "id": "TC001",
+            "description": "Verify CVE ID",
+            "expected": "CVE-2024-0005",
+            "input": "cve_id"
+          },
+          {
+            "id": "TC002",
+            "description": "Verify CVSS score",
+            "expected": "5.5",
+            "input": "cvss_score"
+          },
+          {
+            "id": "TC003",
+            "description": "Verify severity",
+            "expected": "MEDIUM",
+            "input": "severity"
+          }
+        ],
+        "qa_status": "PENDING",
+        "triage_confidence": 0.89,
+        "watsonx_model": "ibm/granite-13b-instruct-v2",
+        "human_review_required": false
+      }
+    }
+  ]
+}
