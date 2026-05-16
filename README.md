@@ -432,6 +432,6 @@ For questions or issues:
 
 ---
 
-**Built with ❤️ for SOC analysts everywhere**
+**Built for SOC analysts everywhere**
 
 *ThreatScribe AI — Because every CVE deserves a second pair of eyes (and IBM Bob has four)*
